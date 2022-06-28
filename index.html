@@ -33,19 +33,21 @@
       else if ((this.largePizza + this.mediumPizza + this.smallPizza) > this.paymentAmount) {
         this.returnMessage = 'Payment unsuccessful'
       }
-      <!-- else {this.returnMessage = 'Payment Successful'
-      setTimeout([) => {
-        this.clearCart(), 3000];
-    } -->
-    },
+      else {this.returnMessage = 'Payment Successful'
 
+      setTimeout(()=> {
+        this.checkOut=false;
+        this.clearCart()}, 5000)
+      }
+      
+    },
     clearCart() {
-    this.largePizza = 0.00;
-    this.largePizzaQty = 0;
-    this.mediumPizza = 0.00;
-    this.mediumPizzaQty = 0;
-    this.smallPizza = 0.00;
-    this.smallPizzaQty = 0;
+      this.largePizza = 0.00;
+      this.largePizzaQty = 0;
+      this.mediumPizza = 0.00;
+      this.mediumPizzaQty = 0;
+      this.smallPizza = 0.00;
+      this.smallPizzaQty = 0;
     }
 
   }">
@@ -55,7 +57,7 @@
   <br>
   <br>
 
-  <div x-show="cartPicShow">
+  <div class="cartBox" x-show="cartPicShow">
    <button @click="showCart = true; cartPicShow = false">
     <img src="https://thumbs.dreamstime.com/z/cart-stall-pizza-vector-illustration-white-background-51535050.jpg" width="50" alt="">
     <br>
@@ -66,7 +68,6 @@
    <quantity x-text="largePizzaQty + mediumPizzaQty + smallPizzaQty"></quantity> pizza in the cart
   </span>
   </div>
-
 
   
   <div class="cartBox" x-show="showCart">
