@@ -33,7 +33,7 @@ body {
     border-radius : 1em;
     margin : 1em;
     padding : 1em;
-    flex: 1;            
+    display: flex;            
     
 }
 @media (min-width: 768px) {
