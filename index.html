@@ -33,9 +33,21 @@
       else if ((this.largePizza + this.mediumPizza + this.smallPizza) > this.paymentAmount) {
         this.returnMessage = 'Payment unsuccessful'
       }
-      else {this.returnMessage = 'Payment Successful'}
+      <!-- else {this.returnMessage = 'Payment Successful'
+      setTimeout([) => {
+        this.clearCart(), 3000];
+    } -->
+    },
+
+    clearCart() {
+    this.largePizza = 0.00;
+    this.largePizzaQty = 0;
+    this.mediumPizza = 0.00;
+    this.mediumPizzaQty = 0;
+    this.smallPizza = 0.00;
+    this.smallPizzaQty = 0;
     }
-    
+
   }">
 
   
